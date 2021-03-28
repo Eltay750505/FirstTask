@@ -2,14 +2,14 @@ package ru.gmail.romanov1234567890987.service.impl;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 import ru.gmail.romanov1234567890987.model.ArrayClass;
 import ru.gmail.romanov1234567890987.service.DeterminationService;
 
-import java.lang.invoke.MethodHandles;
+
 
 public class DeterminationServiceImpl implements DeterminationService {
-    private static final Logger LOGGER = (Logger) LogManager.getLogger(MethodHandles.lookup().lookupClass());
+    private static final Logger LOGGER = LogManager.getLogger();
 
     @Override
     public int determineAverage(ArrayClass arrayClass) {

@@ -8,7 +8,7 @@ import ru.gmail.romanov1234567890987.valid.ValidationClass;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
+
 
 public class CustomFileReader {
     private static final Logger LOGGER = LogManager.getLogger();

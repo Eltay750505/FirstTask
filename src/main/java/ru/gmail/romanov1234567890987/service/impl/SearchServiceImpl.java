@@ -6,6 +6,8 @@ import org.apache.logging.log4j.Logger;
 import ru.gmail.romanov1234567890987.model.ArrayClass;
 import ru.gmail.romanov1234567890987.service.SearchService;
 
+import java.util.stream.IntStream;
+
 
 public class SearchServiceImpl implements SearchService {
     private static final Logger LOGGER = LogManager.getLogger();
@@ -35,6 +37,26 @@ public class SearchServiceImpl implements SearchService {
             }
         }
         LOGGER.log(Level.INFO, "Found max element: " + max);
+        return max;
+    }
+
+    @Override
+    public int findMinWithIntStream(ArrayClass arrayClass) {
+        int[] integers = arrayClass.getArray();
+        int min = IntStream
+                .of(integers)
+                .min()
+                .getAsInt();
+        return min;
+    }
+
+    @Override
+    public int findMaxWithIntStream(ArrayClass arrayClass) {
+        int[] integers = arrayClass.getArray();
+        int max = IntStream
+                .of(integers)
+                .max()
+                .getAsInt();
         return max;
     }
 }

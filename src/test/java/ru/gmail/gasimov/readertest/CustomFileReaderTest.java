@@ -1,0 +1,27 @@
+package ru.gmail.gasimov.readertest;
+
+import junit.framework.TestCase;
+import org.junit.Assert;
+import org.junit.Test;
+import ru.gmail.gasimov.exception.ArrayException;
+import ru.gmail.gasimov.filereader.CustomFileReader;
+
+public class CustomFileReaderTest extends TestCase {
+    public static final String PATH = "src\\main\\resources\\numbers.txt";
+
+
+    @Test(expected = ArrayException.class)
+    public void fileNotFoundExceptionTest() {
+        String pathName = "";
+        CustomFileReader customFileReader = new CustomFileReader();
+        customFileReader.readCorrectStringFromFile(pathName);
+    }
+
+
+    public void testReadCorrectStringFromFile() {
+        String expected = "1 3 43 4 5";
+        CustomFileReader customFileReader = new CustomFileReader();
+        String actual = customFileReader.readCorrectStringFromFile(PATH);
+        Assert.assertEquals(expected, actual);
+    }
+}

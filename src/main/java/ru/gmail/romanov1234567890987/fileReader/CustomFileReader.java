@@ -3,6 +3,7 @@ package ru.gmail.romanov1234567890987.fileReader;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.gmail.romanov1234567890987.exception.ArrayException;
 import ru.gmail.romanov1234567890987.valid.ValidationClass;
 
 import java.io.BufferedReader;
@@ -20,7 +21,7 @@ public class CustomFileReader {
                 .split(System.lineSeparator());
         for (int i = 0; i < string.length; i++) {
             boolean isCorrect = validationClass.checkString(string[i]);
-            if(isCorrect){
+            if (isCorrect) {
                 stringBuilder.append(string[i]);
                 break;
             }
@@ -28,7 +29,7 @@ public class CustomFileReader {
         return stringBuilder.toString();
     }
 
-    public String readLinesFromFile(String pathName) {
+    private String readLinesFromFile(String pathName) {
         String line = new String();
         StringBuffer stringBuffer = new StringBuffer();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(pathName))) {
@@ -40,7 +41,7 @@ public class CustomFileReader {
             }
             line = stringBuffer.toString();
         } catch (IOException e) {
-            LOGGER.log(Level.ERROR,"Cannot read file : " + e.getMessage());
+            LOGGER.log(Level.ERROR, "File not found" + e.getMessage());
         }
         return line;
     }

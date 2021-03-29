@@ -4,6 +4,7 @@ import ru.gmail.romanov1234567890987.model.ArrayClass;
 import ru.gmail.romanov1234567890987.service.SortService;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class SortServiceImpl implements SortService {
     @Override
@@ -18,8 +19,9 @@ public class SortServiceImpl implements SortService {
                 for (j = i; j >= step; j -= step) {
                     if (tmp < integers[j - step])
                         integers[j] = integers[j - step];
-                    else
+                    else {
                         break;
+                    }
                 }
                 integers[j] = tmp;
             }
@@ -31,27 +33,22 @@ public class SortServiceImpl implements SortService {
         int[] integers = arrayClass.getArray();
         int left = 0, right = integers.length - 1;
         int flag = 1;
-        while ((left < right) && flag > 0)
-        {
+        while ((left < right) && flag > 0) {
             flag = 0;
-            for (int i = left; i<right; i++)
-            {
-                if (integers[i]>integers[i + 1])
-                {
-                    int t = integers[i];
+            for (int i = left; i < right; i++) {
+                if (integers[i] > integers[i + 1]) {
+                    int temp = integers[i];
                     integers[i] = integers[i + 1];
-                    integers[i + 1] = t;
+                    integers[i + 1] = temp;
                     flag = 1;
                 }
             }
             right--;
-            for (int i = right; i>left; i--)
-            {
-                if (integers[i - 1]>integers[i])
-                {
-                    int t = integers[i];
+            for (int i = right; i > left; i--) {
+                if (integers[i - 1] > integers[i]) {
+                    int temp = integers[i];
                     integers[i] = integers[i - 1];
-                    integers[i - 1] = t;
+                    integers[i - 1] = temp;
                     flag = 1;
                 }
             }
@@ -76,5 +73,16 @@ public class SortServiceImpl implements SortService {
             }
         }
         return integers;
+    }
+
+    @Override
+    public int[] sortWithIntStream(ArrayClass arrayClass) {
+        int[] ints = arrayClass.getArray();
+        int[] result = IntStream
+                .of(ints)
+                .sorted()
+                .toArray();
+        return result;
+
     }
 }

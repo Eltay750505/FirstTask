@@ -8,4 +8,6 @@ public interface SortService {
     int[] shakerSort(ArrayClass arrayClass);
 
     int[] bubbleSort(ArrayClass arrayClass);
+
+    int[] sortWithIntStream(ArrayClass arrayClass);
 }

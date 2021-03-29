@@ -7,11 +7,11 @@ public interface CountService {
 
     int countSum(ArrayClass arrayClass);
 
-    void calculateCountOfPositiveAndNegativeElements(ArrayClass arrayClass);
+    int[] calculateCountOfPositiveAndNegativeElements(ArrayClass arrayClass);
 
     int countAverageWithIntStream(ArrayClass arrayClass);
 
     int countSumWithIntStream(ArrayClass arrayClass);
 
-    void countPositiveAndNegativeWithIntStream(ArrayClass arrayClass);
+    int[] countPositiveAndNegativeWithIntStream(ArrayClass arrayClass);
 }

@@ -36,7 +36,7 @@ public class CountServiceImpl implements CountService {
     }
 
     @Override
-    public void calculateCountOfPositiveAndNegativeElements(ArrayClass arrayClass) {
+    public int[] calculateCountOfPositiveAndNegativeElements(ArrayClass arrayClass) {
         int[] integers = arrayClass.getArray();
         int countOfPositive = 0;
         int countOfNegative = 0;
@@ -48,8 +48,8 @@ public class CountServiceImpl implements CountService {
                 countOfPositive++;
             }
         }
-        LOGGER.log(Level.INFO, "Count of positive: " + countOfPositive);
-        LOGGER.log(Level.INFO, "Count of negative: " + countOfNegative);
+        int[] result = {countOfNegative, countOfPositive};
+        return result;
     }
 
     @Override
@@ -71,19 +71,19 @@ public class CountServiceImpl implements CountService {
     }
 
     @Override
-    public void countPositiveAndNegativeWithIntStream(ArrayClass arrayClass) {
+    public int[] countPositiveAndNegativeWithIntStream(ArrayClass arrayClass) {
         int[] integers = arrayClass.getArray();
 
-        long countCountOfNegatives = IntStream
+        int countOfNegative = (int) IntStream
                 .of(integers)
                 .filter(x -> x < 0)
                 .count();
-        long countCountOfPositive = IntStream
+        int countOfPositive = (int) IntStream
                 .of(integers)
                 .filter(x -> x > 0)
                 .count();
 
-        LOGGER.log(Level.INFO, "Count of Negatives : " + countCountOfNegatives);
-        LOGGER.log(Level.INFO, "Count of Positives : " + countCountOfPositive);
+        int[] result = {countOfNegative, countOfPositive};
+        return result;
     }
 }

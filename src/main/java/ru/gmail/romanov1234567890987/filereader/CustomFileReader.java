@@ -1,9 +1,8 @@
-package ru.gmail.romanov1234567890987.fileReader;
+package ru.gmail.romanov1234567890987.filereader;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.gmail.romanov1234567890987.exception.ArrayException;
 import ru.gmail.romanov1234567890987.valid.ValidationClass;
 
 import java.io.BufferedReader;

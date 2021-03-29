@@ -1,4 +1,4 @@
-package ru.gmail.romanov1234567890987.serviceTest;
+package ru.gmail.romanov1234567890987.servicetest;
 
 import junit.framework.TestCase;
 import org.junit.Assert;

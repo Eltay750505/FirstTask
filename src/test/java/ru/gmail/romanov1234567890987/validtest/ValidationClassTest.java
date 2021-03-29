@@ -1,4 +1,4 @@
-package ru.gmail.romanov1234567890987.validTest;
+package ru.gmail.romanov1234567890987.validtest;
 
 import junit.framework.TestCase;
 import ru.gmail.romanov1234567890987.valid.ValidationClass;

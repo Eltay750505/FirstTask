@@ -1,10 +1,10 @@
-package ru.gmail.romanov1234567890987.readerTest;
+package ru.gmail.romanov1234567890987.readertest;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 import ru.gmail.romanov1234567890987.exception.ArrayException;
-import ru.gmail.romanov1234567890987.fileReader.CustomFileReader;
+import ru.gmail.romanov1234567890987.filereader.CustomFileReader;
 
 public class CustomFileReaderTest extends TestCase {
     public static final String PATH = "src\\main\\resources\\numbers.txt";

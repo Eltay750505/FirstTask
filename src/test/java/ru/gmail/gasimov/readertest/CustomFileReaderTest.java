@@ -11,14 +11,14 @@ public class CustomFileReaderTest extends TestCase {
 
 
     @Test(expected = ArrayException.class)
-    public void fileNotFoundExceptionTest() {
+    public void fileNotFoundExceptionTest() throws ArrayException {
         String pathName = "";
         CustomFileReader customFileReader = new CustomFileReader();
         customFileReader.readCorrectStringFromFile(pathName);
     }
 
 
-    public void testReadCorrectStringFromFile() {
+    public void testReadCorrectStringFromFile() throws ArrayException {
         String expected = "1 3 43 4 5";
         CustomFileReader customFileReader = new CustomFileReader();
         String actual = customFileReader.readCorrectStringFromFile(PATH);

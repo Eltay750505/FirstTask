@@ -3,6 +3,7 @@ package ru.gmail.gasimov.filereader;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.gmail.gasimov.exception.ArrayException;
 import ru.gmail.gasimov.valid.ValidationClass;
 
 import java.io.BufferedReader;
@@ -13,7 +14,10 @@ import java.io.IOException;
 public class CustomFileReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public String readCorrectStringFromFile(String pathName) {
+    public String readCorrectStringFromFile(String pathName) throws ArrayException {
+        if (pathName == null || pathName == "") {
+            throw new ArrayException("Incorrect pathName");
+        }
         StringBuilder stringBuilder = new StringBuilder();
         ValidationClass validationClass = new ValidationClass();
         String[] string = readLinesFromFile(pathName)

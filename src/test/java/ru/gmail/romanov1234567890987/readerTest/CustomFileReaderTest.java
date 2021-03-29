@@ -24,7 +24,4 @@ public class CustomFileReaderTest extends TestCase {
         String actual = customFileReader.readCorrectStringFromFile(PATH);
         Assert.assertEquals(expected, actual);
     }
-
-    public void testReadLinesFromFile() {
-    }
 }

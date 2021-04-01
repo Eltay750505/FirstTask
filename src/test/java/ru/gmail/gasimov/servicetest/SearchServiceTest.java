@@ -2,9 +2,9 @@ package ru.gmail.gasimov.servicetest;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
-import ru.gmail.gasimov.model.ArrayClass;
-import ru.gmail.gasimov.service.SearchService;
-import ru.gmail.gasimov.service.impl.SearchServiceImpl;
+import ru.gmail.gasimov.firsttask.model.ArrayClass;
+import ru.gmail.gasimov.firsttask.service.SearchService;
+import ru.gmail.gasimov.firsttask.service.impl.SearchServiceImpl;
 
 public class SearchServiceTest extends TestCase {
     public static final int[] INTEGERS = {12, -22, 5, 10, 2, -7, 12, -1};

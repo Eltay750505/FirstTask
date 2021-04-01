@@ -1,7 +1,7 @@
 package ru.gmail.gasimov.validtest;
 
 import junit.framework.TestCase;
-import ru.gmail.gasimov.valid.ValidationClass;
+import ru.gmail.gasimov.firsttask.valid.ValidationClass;
 
 public class ValidationClassTest extends TestCase {
 

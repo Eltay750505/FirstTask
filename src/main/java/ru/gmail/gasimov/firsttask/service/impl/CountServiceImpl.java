@@ -1,10 +1,10 @@
-package ru.gmail.gasimov.service.impl;
+package ru.gmail.gasimov.firsttask.service.impl;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.gmail.gasimov.model.ArrayClass;
-import ru.gmail.gasimov.service.CountService;
+import ru.gmail.gasimov.firsttask.model.ArrayClass;
+import ru.gmail.gasimov.firsttask.service.CountService;
 
 import java.util.stream.IntStream;
 

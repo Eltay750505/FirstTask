@@ -3,8 +3,8 @@ package ru.gmail.gasimov.readertest;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.gmail.gasimov.exception.ArrayException;
-import ru.gmail.gasimov.filereader.CustomFileReader;
+import ru.gmail.gasimov.firsttask.exception.ArrayException;
+import ru.gmail.gasimov.firsttask.filereader.CustomFileReader;
 
 public class CustomFileReaderTest extends TestCase {
     public static final String PATH = "src\\main\\resources\\numbers.txt";

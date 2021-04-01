@@ -1,4 +1,4 @@
-package ru.gmail.gasimov.parse;
+package ru.gmail.gasimov.firsttask.parse;
 
 import java.util.Arrays;
 

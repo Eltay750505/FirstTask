@@ -1,6 +1,6 @@
-package ru.gmail.gasimov.service;
+package ru.gmail.gasimov.firsttask.service;
 
-import ru.gmail.gasimov.model.ArrayClass;
+import ru.gmail.gasimov.firsttask.model.ArrayClass;
 
 public interface SearchService {
     int findMin(ArrayClass arrayClass);

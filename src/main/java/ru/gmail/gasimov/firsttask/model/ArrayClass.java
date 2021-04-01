@@ -1,4 +1,4 @@
-package ru.gmail.gasimov.model;
+package ru.gmail.gasimov.firsttask.model;
 
 
 import java.util.Arrays;

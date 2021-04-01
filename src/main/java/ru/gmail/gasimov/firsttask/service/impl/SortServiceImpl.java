@@ -1,7 +1,7 @@
-package ru.gmail.gasimov.service.impl;
+package ru.gmail.gasimov.firsttask.service.impl;
 
-import ru.gmail.gasimov.model.ArrayClass;
-import ru.gmail.gasimov.service.SortService;
+import ru.gmail.gasimov.firsttask.model.ArrayClass;
+import ru.gmail.gasimov.firsttask.service.SortService;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;

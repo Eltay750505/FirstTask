@@ -1,10 +1,10 @@
-package ru.gmail.gasimov.filereader;
+package ru.gmail.gasimov.firsttask.filereader;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.gmail.gasimov.exception.ArrayException;
-import ru.gmail.gasimov.valid.ValidationClass;
+import ru.gmail.gasimov.firsttask.exception.ArrayException;
+import ru.gmail.gasimov.firsttask.valid.ValidationClass;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

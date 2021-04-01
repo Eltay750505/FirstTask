@@ -7,7 +7,7 @@ import ru.gmail.gasimov.firsttask.exception.ArrayException;
 import ru.gmail.gasimov.firsttask.filereader.CustomFileReader;
 
 public class CustomFileReaderTest extends TestCase {
-    public static final String PATH = "src\\main\\resources\\numbers.txt";
+    public static final String PATH = "src\\main\\resources\\data\\numbers.txt";
 
 
     @Test(expected = ArrayException.class)

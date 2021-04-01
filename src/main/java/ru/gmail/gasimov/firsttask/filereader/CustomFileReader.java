@@ -15,7 +15,7 @@ public class CustomFileReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public String readCorrectStringFromFile(String pathName) throws ArrayException {
-        if (pathName == null || pathName == "") {
+        if (pathName == null || pathName == "" || pathName.length() == 0) {
             throw new ArrayException("Incorrect pathName");
         }
         StringBuilder stringBuilder = new StringBuilder();

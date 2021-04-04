@@ -1,7 +1,6 @@
 package ru.gmail.gasimov.firsttask.exception;
 
 public class ArrayException extends Exception{
-
     public ArrayException(String message) {
         super(message);
     }

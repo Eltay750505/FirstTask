@@ -1,4 +1,4 @@
-package ru.gmail.gasimov.firsttask.util;
+package ru.gmail.gasimov.task1.util;
 
 
 import java.util.Random;

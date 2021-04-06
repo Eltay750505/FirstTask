@@ -3,7 +3,7 @@ package ru.gmail.gasimov.utiltest;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.gmail.gasimov.firsttask.util.RandomUtil;
+import ru.gmail.gasimov.task1.util.RandomUtil;
 
 public class RandomUtilTest extends TestCase {
     @Test

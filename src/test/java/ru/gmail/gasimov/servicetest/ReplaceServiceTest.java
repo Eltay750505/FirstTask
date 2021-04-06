@@ -2,18 +2,18 @@ package ru.gmail.gasimov.servicetest;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
-import ru.gmail.gasimov.firsttask.model.ArrayClass;
-import ru.gmail.gasimov.firsttask.service.ReplaceService;
-import ru.gmail.gasimov.firsttask.service.impl.ReplaceServiceImpl;
+import ru.gmail.gasimov.task1.model.ArrayClass;
+import ru.gmail.gasimov.task1.service.ReplaceService;
+import ru.gmail.gasimov.task1.service.impl.ReplaceServiceImpl;
 
 public class ReplaceServiceTest extends TestCase {
     public static final int[] INTEGERS = {12, -223};
+    public static final ReplaceService REPLACE_SERVICE = new ReplaceServiceImpl();
 
     public void testReplaceByCondition() {
         int[] expectedInts = {12, -1};
         ArrayClass arrayClass = new ArrayClass(INTEGERS);
-        ReplaceService replaceService = new ReplaceServiceImpl();
-        int[] result = replaceService.replaceByCondition(arrayClass);
+        int[] result = REPLACE_SERVICE.replaceByCondition(arrayClass);
         Assert.assertEquals(result[1], expectedInts[1], 0.001);
     }
 
@@ -21,8 +21,7 @@ public class ReplaceServiceTest extends TestCase {
         int[] expectedInts = {12, -1};
         int newItem = -1;
         ArrayClass arrayClass = new ArrayClass(INTEGERS);
-        ReplaceService replaceService = new ReplaceServiceImpl();
-        int[] result = replaceService.replaceByConditionWithIntStream(arrayClass, x -> x < 0, newItem);
+        int[] result = REPLACE_SERVICE.replaceByConditionWithIntStream(arrayClass, x -> x < 0, newItem);
         Assert.assertEquals(result[1], expectedInts[1], 0.001);
     }
 }

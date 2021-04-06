@@ -2,9 +2,9 @@ package ru.gmail.gasimov.servicetest;
 
 import junit.framework.TestCase;
 import org.junit.Assert;
-import ru.gmail.gasimov.firsttask.model.ArrayClass;
-import ru.gmail.gasimov.firsttask.service.SortService;
-import ru.gmail.gasimov.firsttask.service.impl.SortServiceImpl;
+import ru.gmail.gasimov.task1.model.ArrayClass;
+import ru.gmail.gasimov.task1.service.SortService;
+import ru.gmail.gasimov.task1.service.impl.SortServiceImpl;
 
 
 public class SortServiceTest extends TestCase {

@@ -3,9 +3,9 @@ package ru.gmail.gasimov.servicetest;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.gmail.gasimov.firsttask.model.ArrayClass;
-import ru.gmail.gasimov.firsttask.service.CountService;
-import ru.gmail.gasimov.firsttask.service.impl.CountServiceImpl;
+import ru.gmail.gasimov.task1.model.ArrayClass;
+import ru.gmail.gasimov.task1.service.CountService;
+import ru.gmail.gasimov.task1.service.impl.CountServiceImpl;
 
 public class CountServiceTest extends TestCase {
     public static final CountService COUNT_SERVICE = new CountServiceImpl();

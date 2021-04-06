@@ -1,16 +1,12 @@
-package ru.gmail.gasimov.firsttask.service.impl;
+package ru.gmail.gasimov.task1.service.impl;
 
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import ru.gmail.gasimov.firsttask.model.ArrayClass;
-import ru.gmail.gasimov.firsttask.service.CountService;
+import ru.gmail.gasimov.task1.model.ArrayClass;
+import ru.gmail.gasimov.task1.service.CountService;
 
 import java.util.stream.IntStream;
 
 
 public class CountServiceImpl implements CountService {
-    private static final Logger LOGGER = LogManager.getLogger();
 
     @Override
     public int countAverage(ArrayClass arrayClass) {
@@ -20,7 +16,6 @@ public class CountServiceImpl implements CountService {
             sum += integers[i];
         }
         int average = sum / integers.length;
-        LOGGER.log(Level.INFO, "Average: " + average);
         return average;
     }
 
@@ -31,7 +26,6 @@ public class CountServiceImpl implements CountService {
         for (int i = 0; i < integers.length; i++) {
             sum += integers[i];
         }
-        LOGGER.log(Level.INFO, "Sum: " + sum);
         return sum;
     }
 

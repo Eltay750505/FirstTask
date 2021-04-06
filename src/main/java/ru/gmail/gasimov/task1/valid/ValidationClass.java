@@ -1,4 +1,4 @@
-package ru.gmail.gasimov.firsttask.valid;
+package ru.gmail.gasimov.task1.valid;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

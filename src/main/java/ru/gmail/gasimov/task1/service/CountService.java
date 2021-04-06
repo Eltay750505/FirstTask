@@ -1,6 +1,6 @@
-package ru.gmail.gasimov.firsttask.service;
+package ru.gmail.gasimov.task1.service;
 
-import ru.gmail.gasimov.firsttask.model.ArrayClass;
+import ru.gmail.gasimov.task1.model.ArrayClass;
 
 public interface CountService {
     int countAverage(ArrayClass arrayClass);

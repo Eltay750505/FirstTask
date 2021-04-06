@@ -1,10 +1,10 @@
-package ru.gmail.gasimov.firsttask.filereader;
+package ru.gmail.gasimov.task1.filereader;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.gmail.gasimov.firsttask.exception.ArrayException;
-import ru.gmail.gasimov.firsttask.valid.ValidationClass;
+import ru.gmail.gasimov.task1.exception.ArrayException;
+import ru.gmail.gasimov.task1.valid.ValidationClass;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,7 +15,7 @@ public class CustomFileReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public String readCorrectStringFromFile(String pathName) throws ArrayException {
-        if (pathName == null || pathName == "" || pathName.length() == 0) {
+        if (pathName == null || pathName == "" || pathName.isEmpty()) {
             throw new ArrayException("Incorrect pathName");
         }
         StringBuilder stringBuilder = new StringBuilder();

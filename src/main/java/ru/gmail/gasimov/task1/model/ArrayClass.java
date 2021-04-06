@@ -1,4 +1,4 @@
-package ru.gmail.gasimov.firsttask.model;
+package ru.gmail.gasimov.task1.model;
 
 
 import java.util.Arrays;
@@ -6,7 +6,14 @@ import java.util.Arrays;
 public class ArrayClass {
     private int[] array;
 
+    public ArrayClass() {
+    }
+
     public ArrayClass(int[] array) {
+        this.array = Arrays.copyOf(array, array.length);
+    }
+
+    public void setArray(int[] array) {
         this.array = Arrays.copyOf(array, array.length);
     }
 
@@ -25,20 +32,23 @@ public class ArrayClass {
         if (object == this) {
             return true;
         }
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
         if (!(object instanceof ArrayClass)) {
             return false;
         }
         ArrayClass intArrayToCompare = (ArrayClass) object;
-        return Arrays.equals(array, intArrayToCompare.getArray());
+        return Arrays.equals(this.array, intArrayToCompare.getArray());
     }
 
     @Override
     public int hashCode() {
-        if (array == null) {
+        if (this.array == null) {
             return 0;
         }
         int result = 1;
-        for (int element : array) {
+        for (int element : this.array) {
             result = 31 * result + element;
         }
         return result;

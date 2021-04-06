@@ -1,4 +1,4 @@
-package ru.gmail.gasimov.firsttask.exception;
+package ru.gmail.gasimov.task1.exception;
 
 public class ArrayException extends Exception{
     public ArrayException(String message) {

@@ -1,7 +1,7 @@
-package ru.gmail.gasimov.firsttask.service.impl;
+package ru.gmail.gasimov.task1.service.impl;
 
-import ru.gmail.gasimov.firsttask.model.ArrayClass;
-import ru.gmail.gasimov.firsttask.service.ReplaceService;
+import ru.gmail.gasimov.task1.model.ArrayClass;
+import ru.gmail.gasimov.task1.service.ReplaceService;
 
 import java.util.function.IntPredicate;
 import java.util.stream.IntStream;
